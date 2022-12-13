@@ -1,24 +1,24 @@
 import React from 'react'
-import Me from "../../assets/avatar-1.svg";
-import HeaderSocials from './HeaderSocials';
+import Me from "../../assets/me2.svg";
+import {Socials} from './Socials';
 import ScrollDown from "./ScrollDown"
-import Shapes from './Shapes';
+import Data from './Data';
 import './home.css';
 
-function home() {
+function Home() {
     return (
-        <section className='home container' id="home">
-            <div className='intro'>
-                <img src={Me} alt="" className='home__img' />
-                <h1 className="home__name">Kevin Bravo</h1>
-                <span className="home__education">Smart contract developer</span>
-                <HeaderSocials />
-                <a href="#contact" className="btn">Contact Me</a>
+        <section className='home section' id="home">
+            <div className="home__container container grid">
+                <div className="home__content grid">
+                    <Socials />
+                    <div className="home__img">
+                    </div>
+                    <Data />
+                </div>
                 <ScrollDown/>
             </div>
-            <Shapes/>
         </section>
     )
 }
 
-export default home
+export default Home

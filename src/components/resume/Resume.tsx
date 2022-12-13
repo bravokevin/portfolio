@@ -1,44 +1,119 @@
-import React from 'react'
+import { useState } from 'react'
 import Data from './Data'
-import Card from './Card'
 import "./resume.css"
-export const Resume = () => {
+const Resume = () => {
+
+    const [toggleState, setToggleState] = useState(0);
+
+    const toggleTab = (index: 0 | 1) => {
+        setToggleState(index);
+    }
+
     return (
-        <section className="resume container section" id="resume">
+        <section className="resume section" id="resume">
             <h2 className="section__title">Experience</h2>
-            <div className="resume__container grid">
-                <div className="timeline grid">
-                    {Data.map(({ icon, title, year, desc, id, category }) => {
-                        if (category === "education") {
-                            return (
-                                <Card
-                                    key={id}
-                                    icon={icon}
-                                    title={title}
-                                    year={year}
-                                    desc={desc}
-                                />
-                            )
-                        }
-                    })}
+            <span className="section__subtitle">My personal Jurney</span>
+
+            <div className="resume__container container">
+
+                <div className="resume__tabs">
+                    <div className={
+                        toggleState === 1 ?
+                            "resume__button resume__active button--flex" :
+                            "resume__button button--flex"
+                    }
+                    onClick={() =>toggleTab(1)}>
+                        <i className="uil uil-graduation-cap resume__active resume__icon"></i>
+                        Education
+                    </div>
+
+                    <div className={
+                        toggleState === 0 ?
+                            "resume__button resume__active button--flex" :
+                            "resume__button button--flex"
+                    }
+                    onClick={() =>toggleTab(0)}>
+                        <i className="uil uil-briefcase-alt resume__icon"></i>
+                        Experience
+                    </div>
                 </div>
 
-                <div className="timeline grid">
-                    {Data.map(({ icon, title, year, desc, id, category }) => {
-                        if (category === "experience") {
-                            return (
-                                <Card
-                                    key={id}
-                                    icon={icon}
-                                    title={title}
-                                    year={year}
-                                    desc={desc}
-                                />
-                            )
-                        }
-                    })}
+
+                <div className="resume__sections">
+                    <div className={toggleState === 1 ? "resume__content resume__content-active" : "resume__content "}>
+
+                        <div className="resume__data">
+                            <div>
+                                <h3 className="resume__title">ZK-Proof Bootcamp by Encode Club</h3>
+                                <span className="resume__subtitle"></span>
+                                <div className="resume__calendar">
+                                    <i className="uil uil-calendar-alt"></i> 02/2022 -04/2022
+                                </div>
+                            </div>
+
+                            <div>
+                                <span className="resume__rounder"></span>
+                                <span className="resume__line"></span>
+                            </div>
+                        </div>
+
+
+                        <div className="resume__data">
+                            <div></div>
+                            <div>
+                                <span className="resume__rounder"></span>
+                                <span className="resume__line"></span>
+                            </div>
+                            <div>
+                                <h3 className="resume__title">Pipeline Developer</h3>
+                                <span className="resume__subtitle"></span>
+                                <div className="resume__calendar">
+                                    <i className="uil uil-calendar-alt"></i>10/2022 - Present
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className={toggleState === 0 ? "resume__content resume__content-active" : "resume__content "}>
+
+                        {/* <div className="resume__data">
+                            <div>
+                                <h3 className="resume__title">dfasdfasd</h3>
+                                <span className="resume__subtitle">adfasdfa</span>
+                                <div className="resume__calendar">
+                                    <i className="uil uil-calendar-alt"></i>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <span className="resume__rounder"></span>
+                                <span className="resume__line"></span>
+                            </div>
+                        </div>
+
+
+                        <div className="resume__data">
+                            <div></div>
+                            <div>
+                                <span className="resume__rounder"></span>
+                                <span className="resume__line"></span>
+                            </div>
+                            <div>
+                                <h3 className="resume__title">sdfadfa</h3>
+                                <span className="resume__subtitle">adfasdfad</span>
+                                <div className="resume__calendar">
+                                    <i className="uil uil-calendar-alt"></i>32324423
+                                </div>
+                            </div>
+                        </div> */}
+
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
+
+export default Resume;
