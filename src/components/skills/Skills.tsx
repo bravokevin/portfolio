@@ -1,7 +1,8 @@
 import React from 'react'
 import "./skills.css";
-import SmartContract from './SmartContract';
-import Frontend from './Frontend';
+import Languages from './Languages';
+import Tools from './Tools';
+import Frameworks from './Frameworks';
 
 const Skills = () => {
     return (
@@ -13,8 +14,9 @@ const Skills = () => {
                 My technical level
             </span>
             <div className="skills__container container grid">
-                <SmartContract />
-                <Frontend/>
+                <Languages />
+                <Tools />
+                <Frameworks/>
             </div>
         </section>
     )

@@ -20,8 +20,8 @@ const Footer = () => {
                 <ul className="footer__list">
                     {footerLinks.map(({ link, name, index}) => {
                         return (
-                            <li>
-                                <a href={link} className="footer__link" key={index}>{name}</a>
+                            <li key={index}>
+                                <a href={link} className="footer__link" >{name}</a>
                             </li>
                         )
                     })}

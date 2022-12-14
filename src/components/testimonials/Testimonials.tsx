@@ -31,7 +31,6 @@ const data = [
 
 const Testimonials = () => {
     return (
-
         <section className="testimonials container section">
             <h2 className="section__title">
                 Clients & Reviews
