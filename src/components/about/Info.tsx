@@ -4,7 +4,7 @@ function Info() {
     const achivements = [
         { title: "Experience", subtitle: "1 year working", icon: "bx-award", index:1 },
         { title: "Completed", subtitle: "5 projects completed",  icon: "bx-briefcase-alt",index:2 },
-        { title: "Suport", subtitle: "online 24/7", icon: "bx-support", index:3},
+        { title: "Learning", subtitle: "Constanly learning 24/7", icon: "bx-brain", index:3},
 
 
     ]
