@@ -34,6 +34,7 @@ const data = await fetch("https://api.hashnode.com/", {
 });
 const results = await data.json();
 const articles = results.data.user.publication.posts;
+console.log(articles)
 const Blogs = () => {
   return (
 
@@ -48,15 +49,15 @@ const Blogs = () => {
           slidesPerView: 2
         },
         768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 48
         }
       }}
     >
       {articles.map((item) => {
         return (
-          <SwiperSlide>
-            <BlogsItems item={item} key={item.id} />
+          <SwiperSlide  key={item.id}>
+            <BlogsItems item={item} />
           </SwiperSlide>
         )
       })}
