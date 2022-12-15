@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__container container">
-                <h1 className="footer__title">Bravo</h1>
+                <h1 className="footer__title">Kevin Bravo</h1>
                 <ul className="footer__list">
                     {footerLinks.map(({ link, name, index}) => {
                         return (
@@ -38,7 +38,7 @@ const Footer = () => {
                     }
 
                 </div>
-                <span className="footer__copy">Kevin Bravo. All rigths reserved</span>
+                <span className="footer__copy">Kevin Bravo. 2022 &#169; All rigths reserved</span>
 
             </div>
         </footer>

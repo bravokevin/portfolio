@@ -17,16 +17,9 @@ const NAV_ITEMS = [{
 {
     name: 'Skills',
     link: '#skills',
-    icon: '',
+    icon: 'briefcase-alt',
     id: 3
 },
-{
-    name: 'Services',
-    link: '#services',
-    icon: 'briefcase-alt',
-    id: 4
-},
-
 {
     name: 'Blog',
     link: 'https://kevdevto.hashnode.dev/',
