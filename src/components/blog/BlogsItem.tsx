@@ -1,4 +1,5 @@
 import React from "react";
+
 const BlogsItems = (props) => {
     const { slug, coverImage, title} = props.item;
     return (

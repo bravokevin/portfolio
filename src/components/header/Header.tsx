@@ -17,7 +17,7 @@ const NAV_ITEMS = [{
 {
     name: 'Skills',
     link: '#skills',
-    icon: 'file-alt',
+    icon: '',
     id: 3
 },
 {
@@ -30,7 +30,7 @@ const NAV_ITEMS = [{
 {
     name: 'Blog',
     link: 'https://kevdevto.hashnode.dev/',
-    icon: 'scenery',
+    icon: 'file-alt',
     id: 5
 },
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import BlogsItems from './BlogsItem'
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -32,12 +31,14 @@ const data = await fetch("https://api.hashnode.com/", {
     variables,
   }),
 });
+
+
 const results = await data.json();
 const articles = results.data.user.publication.posts;
-console.log(articles)
+
+
 const Blogs = () => {
   return (
-
     <Swiper className="blog__container container grid"
       modules={[Pagination]}
       spaceBetween={24}
@@ -46,7 +47,7 @@ const Blogs = () => {
       pagination={{ clickable: true }}
       breakpoints={{
         567: {
-          slidesPerView: 2
+          slidesPerView: 1
         },
         768: {
           slidesPerView: 3,
@@ -56,8 +57,12 @@ const Blogs = () => {
     >
       {articles.map((item) => {
         return (
-          <SwiperSlide  key={item.id}>
-            <BlogsItems item={item} />
+          <SwiperSlide className="blog__card" key={item.id}>
+            <img src={item.coverImage} alt="" className="blog__img" />
+            <h3 className="blog__title">{item.title}</h3>
+            <a href={`https://kevdevto.hashnode.dev/${item.slug}`} className="blog__button" target="blank">
+              Read <i className="bx bx-right-arrow-alt blog__button-icon"></i>
+            </a>
           </SwiperSlide>
         )
       })}

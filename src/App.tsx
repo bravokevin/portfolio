@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Header from './components/header/Header'
-import Home from './components/home/home'
+import Home from './components/home/Home'
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Services from './components/services/Services'
@@ -25,7 +25,7 @@ const App = () => {
         <Resume />
         {/* <Portfolio/> */}
         <Blog/>
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
