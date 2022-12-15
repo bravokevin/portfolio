@@ -15,15 +15,15 @@
     cursor: pointer;
 }
 
+
 .blog__item:hover {
     background-color: black;
     color: var(--container-color);
 }
 
 .blog__container {
-    grid-template-columns: repeat(2, max-content);
-    gap: 3rem;
-    justify-content: center;
+    max-width: 750px;
+    margin: auto;
 }
 
 .blog__card {
@@ -32,6 +32,7 @@
     padding: 1.25rem;
     border-radius: 1rem;
     max-width: 350px;
+    margin-bottom: 4rem;
 }
 
 .blog__img {
@@ -124,7 +125,7 @@
     opacity: 1 !important;
 } */
 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal, .swiper-pagination-bullets, .swiper-pagination-bullet {
     margin: 0 0.2rem !important;
 
 }

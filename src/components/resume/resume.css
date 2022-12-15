@@ -11,18 +11,20 @@
 .resume__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    color: var(--title-color);
+    color: var(--text-color);
     margin: 0 var(--mb-1);
     cursor: pointer;
 }
 
-.resume__button:hover {
+.resume__button:hover,
+.resume__icon {
     color: var(--title-color-dark);
 }
 
 .resume__icon {
     font-size: 1.8rem;
     margin-right: var(--mb-0-25);
+    color: var(--text-color);
 }
 
 .resume__active {

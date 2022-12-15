@@ -50,6 +50,9 @@
     padding: 0 4rem 0 0;
 }
 
+.about__button {
+    margin-right: 1.5rem;
+}
 
 @media screen and (max-width: 992px) {
     .about__container {

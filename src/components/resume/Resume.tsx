@@ -23,7 +23,7 @@ const Resume = () => {
                             "resume__button button--flex"
                     }
                     onClick={() =>toggleTab(1)}>
-                        <i className="uil uil-graduation-cap resume__active resume__icon"></i>
+                        <i className={toggleState === 1 ? "uil uil-graduation-cap resume__active resume__icon" :"uil uil-graduation-cap  resume__icon"}></i>
                         Education
                     </div>
 
@@ -33,7 +33,7 @@ const Resume = () => {
                             "resume__button button--flex"
                     }
                     onClick={() =>toggleTab(0)}>
-                        <i className="uil uil-briefcase-alt resume__icon"></i>
+                        <i className={toggleState === 0 ? "uil uil-briefcase-alt resume__active resume__icon" :"uil uil-briefcase-alt  resume__icon"} ></i>
                         Experience
                     </div>
                 </div>
@@ -65,10 +65,10 @@ const Resume = () => {
                                 <span className="resume__line"></span>
                             </div>
                             <div>
-                                <h3 className="resume__title">Pipeline Developer</h3>
+                                <h3 className="resume__title"></h3>
                                 <span className="resume__subtitle"></span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i>10/2022 - Present
+                                    <i className="uil uil-calendar-alt"></i>
                                 </div>
                             </div>
                         </div>
@@ -77,12 +77,12 @@ const Resume = () => {
 
                     <div className={toggleState === 0 ? "resume__content resume__content-active" : "resume__content "}>
 
-                        {/* <div className="resume__data">
+                        <div className="resume__data">
                             <div>
-                                <h3 className="resume__title">dfasdfasd</h3>
-                                <span className="resume__subtitle">adfasdfa</span>
+                                <h3 className="resume__title">Software Developer</h3>
+                                <span className="resume__subtitle">Asociacion Venezolano Americana de la Amistad (AVAA) </span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
+                                    <i className="uil uil-calendar-alt"></i>{" "}10/2022 - 03/2022
                                 </div>
                             </div>
 
@@ -93,7 +93,7 @@ const Resume = () => {
                             </div>
                         </div>
 
-
+{/* 
                         <div className="resume__data">
                             <div></div>
                             <div>
@@ -101,10 +101,10 @@ const Resume = () => {
                                 <span className="resume__line"></span>
                             </div>
                             <div>
-                                <h3 className="resume__title">sdfadfa</h3>
-                                <span className="resume__subtitle">adfasdfad</span>
+                                <h3 className="resume__title"></h3>
+                                <span className="resume__subtitle"></span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i>32324423
+                                    <i className="uil uil-calendar-alt"></i>
                                 </div>
                             </div>
                         </div> */}

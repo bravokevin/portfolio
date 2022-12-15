@@ -21,6 +21,12 @@ const NAV_ITEMS = [{
     id: 3
 },
 {
+    name: 'AMA',
+    link: '/ama',
+    icon: 'question',
+    id: 4
+},
+{
     name: 'Blog',
     link: 'https://kevdevto.hashnode.dev/',
     icon: 'file-alt',

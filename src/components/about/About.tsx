@@ -18,10 +18,9 @@ const About = () => {
                 <div className="about__data">
                     <Info />
                     <p className="about__description">
-                        I'm Kevin, smart contract developer from Caracas - Venezuela. Higly interest in ZK-proof, tokenomics and security, with a great understanding of solidity and EVM's related chains. 
+                        I'm Kevin, smart contract developer from Caracas - Venezuela. Higly interest in ZK-proof, tokenomics and security, with a great understanding of solidity and EVM's related chains.
                     </p>
-                    <a href="" className="button button--flex">See my CV</a>
-                    <svg
+                    <a href="" className="button button--flex about__button">See my CV {" "}<svg
                         className="button__icon"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -45,7 +44,8 @@ const About = () => {
                             d="M11.25 17.7502H7.25C6.84 17.7502 6.5 17.4102 6.5 17.0002C6.5 16.5902 6.84 16.2502 7.25 16.2502H11.25C11.66 16.2502 12 16.5902 12 17.0002C12 17.4102 11.66 17.7502 11.25 17.7502Z"
                             fill="var(--container-color)"
                         ></path>
-                    </svg>
+                    </svg></a>
+                    <a href="" className="button button--flex about__button">Know more about me </a>
                 </div>
 
             </div>

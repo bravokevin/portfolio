@@ -39,21 +39,21 @@ const articles = results.data.user.publication.posts;
 
 const Blogs = () => {
   return (
-    <Swiper className="blog__container container grid"
-      modules={[Pagination]}
-      spaceBetween={24}
-      loop={true}
-      grabCursor={true}
-      pagination={{ clickable: true }}
-      breakpoints={{
+    <Swiper className="blog__container"
+    modules={[Pagination]}
+    spaceBetween={24}
+    loop={true}
+    grabCursor={true}
+    pagination={{ clickable: true }}
+    breakpoints ={{
         567: {
-          slidesPerView: 1
+            slidesPerView: 2
         },
         768: {
-          slidesPerView: 3,
-          spaceBetween: 48
+            slidesPerView: 3,
+            spaceBetween: 48
         }
-      }}
+    }}
     >
       {articles.map((item) => {
         return (
