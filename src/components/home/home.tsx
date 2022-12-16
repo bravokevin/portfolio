@@ -1,5 +1,3 @@
-import React from 'react'
-import Me from "../../assets/me2.svg";
 import {Socials} from './Socials';
 import ScrollDown from "./ScrollDown"
 import Data from './Data';

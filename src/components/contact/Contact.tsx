@@ -1,41 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { ErrorInfo, FormEvent, FormEventHandler, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { contactData, formItems } from './ConactData';
+
 import './contact.css';
-
-const contactData = [
-    { title: "Email", content: "bravokevinto@gmail.com", link: "https://mail.google.com/mail/?view=cm&tf=1&to=ravokevinto@gmail.com", icon: "-mail-send", index: 1 },
-    { title: "Telegram", content: "@bravoK", icon: "l-telegram", link: "https://t.me/bravok", index: 2 },
-    { title: "Discord", content: "bravok#6296", icon: "l-discord", link: "https://discordapp.com/channels/@me/bravok#6296/", index: 3 }
-]
-
-const formItems = [
-    {
-        label: "Email",
-        type: "email",
-        placeholder: "Insert your email",
-        name: "email",
-        index: 1
-    },
-    {
-        label: "Subject",
-        type: "text",
-        placeholder: "Insert your subject",
-        name: "subject",
-        index: 2
-    },
-
-
-    {
-        label: "Message",
-        type: "text",
-        placeholder: "Insert your message. Please identify yourself.",
-        name: "message",
-        index: 3
-    },
-
-]
-
-
 
 const Contact = () => {
 
@@ -44,19 +11,41 @@ const Contact = () => {
 
     const form = useRef();
 
-    const sendEmail = (e) => {
+    const validateInputs = () => {
+        const form: HTMLFormElement = document.forms["contactForm"];
+        const email = form["email"].value;
+        const subject = form["subject"].value;
+        const message = form["message"].value;
+
+        if (email.trim() === "") {
+            alert("Email must be filled out")
+            return false
+        }
+        else if (subject.trim() === "") {
+            alert("Subject must be filled out")
+            return false
+        }
+        else if (message.trim() === "") {
+            alert("Message must be filled out")
+            return false
+        }
+        else {
+            return true
+        }
+    }
+
+    const sendEmail = (e: any) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_v95a0yb', 'template_03qju3l', form.current, 'YJTcUryrrxQ69EkYz')
-            .then((result) => {
-                setIsSubmiting(true)
-                e.target.reset()
-            }, (error) => {
-                console.log(error.text);
-            });
-        setTimeout(() => { setIsSubmiting(false) }, 5000);
+        if (validateInputs()) {
+            setIsSubmiting(true)
+            emailjs.sendForm('service_v95a0yb', 'template_03qju3l', form.current, 'YJTcUryrrxQ69EkYz')
+                .then(() => {
+                    e.target.reset()
+                }, () => {
+                });
+            setTimeout(() => { setIsSubmiting(false) }, 5000);
+        }
     };
-
 
     return (
         <section className="contact section" id='contact'>
@@ -82,7 +71,7 @@ const Contact = () => {
                 </div>
                 <div className="contact__content">
                     <h3 className="contact__title">Contact me</h3>
-                    <form ref={form} onSubmit={sendEmail} className="contact__form">
+                    <form ref={form as unknown as React.LegacyRef<HTMLFormElement>} onSubmit={sendEmail} className="contact__form" name="contactForm">
                         {formItems.map(({ label, type, placeholder, name, index }) => {
                             if (name !== "message") {
                                 return (

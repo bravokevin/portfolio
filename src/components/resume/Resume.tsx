@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Data from './Data'
 import "./resume.css"
 const Resume = () => {
 
@@ -22,8 +21,8 @@ const Resume = () => {
                             "resume__button resume__active button--flex" :
                             "resume__button button--flex"
                     }
-                    onClick={() =>toggleTab(1)}>
-                        <i className={toggleState === 1 ? "uil uil-graduation-cap resume__active resume__icon" :"uil uil-graduation-cap  resume__icon"}></i>
+                        onClick={() => toggleTab(1)}>
+                        <i className={toggleState === 1 ? "uil uil-graduation-cap resume__active resume__icon" : "uil uil-graduation-cap  resume__icon"}></i>
                         Education
                     </div>
 
@@ -32,8 +31,8 @@ const Resume = () => {
                             "resume__button resume__active button--flex" :
                             "resume__button button--flex"
                     }
-                    onClick={() =>toggleTab(0)}>
-                        <i className={toggleState === 0 ? "uil uil-briefcase-alt resume__active resume__icon" :"uil uil-briefcase-alt  resume__icon"} ></i>
+                        onClick={() => toggleTab(0)}>
+                        <i className={toggleState === 0 ? "uil uil-briefcase-alt resume__active resume__icon" : "uil uil-briefcase-alt  resume__icon"} ></i>
                         Experience
                     </div>
                 </div>
@@ -44,10 +43,10 @@ const Resume = () => {
 
                         <div className="resume__data">
                             <div>
-                                <h3 className="resume__title">ZK-Proof Bootcamp by Encode Club</h3>
-                                <span className="resume__subtitle"></span>
+                                <h3 className="resume__title">Starknet Basecamp cohort 1</h3>
+                                <span className="resume__subtitle">by Starknet</span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i> 02/2022 -04/2022
+                                    <i className="uil uil-calendar-alt"></i> 10/2020 - 11/2022
                                 </div>
                             </div>
 
@@ -65,11 +64,13 @@ const Resume = () => {
                                 <span className="resume__line"></span>
                             </div>
                             <div>
-                                <h3 className="resume__title"></h3>
+
+                                <h3 className="resume__title">ZK-Proof Bootcamp by Encode Club</h3>
                                 <span className="resume__subtitle"></span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
+                                    <i className="uil uil-calendar-alt"></i> 02/2022 -04/2022
                                 </div>
+
                             </div>
                         </div>
 
@@ -93,7 +94,7 @@ const Resume = () => {
                             </div>
                         </div>
 
-{/* 
+                        {/* 
                         <div className="resume__data">
                             <div></div>
                             <div>

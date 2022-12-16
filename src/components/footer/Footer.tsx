@@ -1,17 +1,6 @@
-import React from 'react'
+import { footerLinks, socialIcons} from './FooterData'
 import './footer.css'
-const footerLinks = [
-    { link: "#about", name: "About", index: 1 },
-    { link: "#portfolio", name: "Projects", index: 2 },
-    { link: "https://kevdevto.hashnode.dev/", name: "Blog", index: 3 }
-]
 
-const socialIcons = [
-    // { icon: "fa-brands fa-instagram", link: "" },
-    { icon: "bx bxl-twitter", link: "https://twitter.com/_BravoK", index:1},
-    { icon: "bx bxl-github", link: "https://github.com/mustafinho/", index: 2},
-    { icon: "bx bxl-linkedin", link: "https://www.linkedin.com/in/bravokevin/", index: 3}
-];
 const Footer = () => {
     return (
         <footer className="footer">
@@ -36,10 +25,8 @@ const Footer = () => {
                             )
                         })
                     }
-
                 </div>
                 <span className="footer__copy">Kevin Bravo. 2022 &#169; All rigths reserved</span>
-
             </div>
         </footer>
     )

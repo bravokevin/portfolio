@@ -1,9 +1,14 @@
-import BlogsItems from './BlogsItem'
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+interface Article  {
+  title: string;
+  slug: string
+  coverImage: string
+}
 
 const query = `
 query GetUserArticles($page: Int!) {
@@ -11,7 +16,6 @@ query GetUserArticles($page: Int!) {
         publication {
             posts(page: $page) {
                 title
-                brief
                 slug
                 coverImage
             }
@@ -40,24 +44,27 @@ const articles = results.data.user.publication.posts;
 const Blogs = () => {
   return (
     <Swiper className="blog__container"
-    modules={[Pagination]}
-    spaceBetween={24}
-    loop={true}
-    grabCursor={true}
-    pagination={{ clickable: true }}
-    breakpoints ={{
-        567: {
-            slidesPerView: 2
+      modules={[Pagination]}
+      spaceBetween={24}
+      loop={true}
+      grabCursor={true}
+      pagination={{ clickable: true }}
+      slidesPerView={2}
+      breakpoints={{
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 20
         },
+
         768: {
-            slidesPerView: 3,
-            spaceBetween: 48
+          slidesPerView: 2,
+          spaceBetween: 48
         }
-    }}
+      }}
     >
-      {articles.map((item) => {
+      {articles.map((item: Article) => {
         return (
-          <SwiperSlide className="blog__card" key={item.id}>
+          <SwiperSlide className="blog__card">
             <img src={item.coverImage} alt="" className="blog__img" />
             <h3 className="blog__title">{item.title}</h3>
             <a href={`https://kevdevto.hashnode.dev/${item.slug}`} className="blog__button" target="blank">

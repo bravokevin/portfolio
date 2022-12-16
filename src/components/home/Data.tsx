@@ -6,7 +6,6 @@ const Data = () => {
       <h1 className="home__title">
         Kevin Bravo
       </h1>
-      {/* aqui va un svg */}
       <h3 className="home__subtitle">
         Smart contract developer
       </h3>

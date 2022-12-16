@@ -157,7 +157,7 @@ img {
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--title-color-dark) !important;
 }
 
 .button__icon {

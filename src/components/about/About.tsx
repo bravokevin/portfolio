@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from "../../assets/me.jpg"
 import "./about.css"
 import Info from './Info';
@@ -10,9 +9,7 @@ const About = () => {
         <section className="about__section" id="about">
             <h2 className="section__title">About me</h2>
             <span className="section__subtitle">
-
             </span>
-
             <div className="about__container container grid">
                 <img src={Image} alt="" className="about__img" />
                 <div className="about__data">
@@ -20,7 +17,7 @@ const About = () => {
                     <p className="about__description">
                         I'm Kevin, smart contract developer from Caracas - Venezuela. Higly interest in ZK-proof, tokenomics and security, with a great understanding of solidity and EVM's related chains.
                     </p>
-                    <a href="" className="button button--flex about__button">See my CV {" "}<svg
+                    <a href="" target="blank" className="button button--flex about__button">See my CV {" "}<svg
                         className="button__icon"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -45,9 +42,8 @@ const About = () => {
                             fill="var(--container-color)"
                         ></path>
                     </svg></a>
-                    <a href="" className="button button--flex about__button">Know more about me </a>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vS6IzVvCi3B8iAL2y6jaxnhjsXVZlgts6a97EmExzgh_24MZsY7Zzlx49AAkkKW_SLsp4s8xEw9eIOi/pub" target="blank" className="button button--flex about__button" style={{backgroundColor: "var(--text-color)", padding: "1.3rem 1rem"}}>Know more about me{" "}<i className='uil uil-user button__icon'></i></a>
                 </div>
-
             </div>
         </section >
     )

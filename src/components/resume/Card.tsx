@@ -1,4 +1,3 @@
-import React from 'react'
 const Card = (props) => {
   const { icon, year, title, desc } = props
   return (
