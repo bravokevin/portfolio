@@ -21,13 +21,13 @@ const Languages = () => {
                 <div className="skills__group">
 
                     {languages1.map((info) => {
-                        return <Card {...info} />
+                        return <Card {...info} key={info.index} />
                     })}
                 </div>
                 <div className="skills__group">
 
                     {languages2.map((info) => {
-                        return <Card {...info} />
+                        return <Card {...info} key={info.index} />
                     })}
                 </div>
             </div>

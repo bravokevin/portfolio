@@ -6,10 +6,10 @@ interface ContactInputProps {
     type: string;
 }
 
-const ContactInputs = ( { name, index, label, placeholder, type }:  ContactInputProps) => {
+const ContactInputs = ( { name, label, placeholder, type }:  ContactInputProps) => {
     if (name !== "message") {
         return (
-            <div className="contact__form-div" key={index}>
+            <div className="contact__form-div">
                 <label className="contact__form-tag">{label}</label>
                 <input type={type} className="contact__form-input" placeholder={placeholder} name={name} />
             </div>
@@ -17,7 +17,7 @@ const ContactInputs = ( { name, index, label, placeholder, type }:  ContactInput
     }
     else {
         return (
-            <div className="contact__form-div contact__form-area" key={index}>
+            <div className="contact__form-div contact__form-area">
                 <label className="contact__form-tag">{label}</label>
                 <textarea
                     name={name}

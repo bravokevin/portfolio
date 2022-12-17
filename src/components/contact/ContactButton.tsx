@@ -33,7 +33,6 @@ const ContactButton = ({ isSendingMessage, isMessageSent }: ContactButtonProps) 
             </button>
         )
     }
-
 }
 
 export default ContactButton

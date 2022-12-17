@@ -22,13 +22,13 @@ const Tools = () => {
             <div className="skills__box">
                 <div className="skills__group">
                     {toolsList1.map((info) => {
-                        return <Card {...info} />
+                        return <Card {...info} key={info.index} />
                     })}
                 </div>
 
                 <div className="skills__group">
                     {toolsList2.map((info) => {
-                        return <Card {...info} />
+                        return <Card {...info} key={info.index} />
                     })}
                 </div>
             </div>

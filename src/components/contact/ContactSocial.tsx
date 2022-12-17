@@ -8,9 +8,9 @@ interface ContactSocialProp {
     content: string;
 }
 
-const ContactSocial = ({index, title, icon, content, link}: ContactSocialProp) => {
+const ContactSocial = ({ title, icon, content, link}: ContactSocialProp) => {
   return (
-    <div className="contact__card" key={index}>
+    <div className="contact__card">
     <i className={`bx bx${icon} contact__card-icon`}></i>
     <h3 className="contact__card-title">{title}</h3>
     <span className="contact__card-data">{content}</span>

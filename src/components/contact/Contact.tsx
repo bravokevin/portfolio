@@ -12,7 +12,7 @@ const Contact = () => {
 
     //prevent the user submit twice the information
     const [isMessageSent, setMessageSent] = useState(false);
-    const [isSendingMessage, setisSendingMessage] = useState(false);
+    const [isSendingMessage, setIsSendingMessage] = useState(false);
 
     const form = useRef();
 
@@ -43,14 +43,17 @@ const Contact = () => {
     const sendEmail = (e: any) => {
         e.preventDefault();
         if (validateInputs()) {
-            setisSendingMessage(true)
+            setIsSendingMessage(true)
             emailjs.sendForm('service_v95a0yb', 'template_03qju3l', form.current, 'YJTcUryrrxQ69EkYz')
                 .then(() => {
                     e.target.reset()
-                    setisSendingMessage(false)
+                    setIsSendingMessage(false)
                     setMessageSent(true)
                 }, () => {
+                    alert('There was an error, try again.')
+                    return
                 });
+
             setTimeout(() => {
                 setMessageSent(false)
             }, 5000);
@@ -66,16 +69,15 @@ const Contact = () => {
                     <h3 className="contact__title">Talk to me</h3>
                     <div className="contact__info">
                         {contactData.map((info) => {
-                            return <ContactSocial {...info} />
+                            return <ContactSocial {...info} key={info.index} />
                         })}
                     </div>
-
                 </div>
                 <div className="contact__content">
                     <h3 className="contact__title">Contact me</h3>
                     <form ref={form as unknown as React.LegacyRef<HTMLFormElement>} onSubmit={sendEmail} className="contact__form" name="contactForm">
                         {formItems.map((info) => {
-                            return < ContactInputs {...info} />
+                            return < ContactInputs {...info} key={info.index} />
                         })}
                         <ContactButton isMessageSent={isMessageSent} isSendingMessage={isSendingMessage} />
                     </form>

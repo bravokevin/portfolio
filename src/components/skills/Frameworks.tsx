@@ -22,12 +22,12 @@ const Frameworks = () => {
                 <div className="skills__group">
 
                     {Frameworks1.map((info) => {
-                        return <Card {...info} />
+                        return <Card {...info} key={info.index} />
                     })}
                 </div>
                 <div className="skills__group">
                     {Frameworks2.map((info) => {
-                        return <Card {...info} />
+                        return <Card {...info} key={info.index} />
 
                     })}
                 </div>
