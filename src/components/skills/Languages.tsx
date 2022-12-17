@@ -1,4 +1,4 @@
-import React from 'react'
+import Card from "./Card";
 
 const languages1 = [
     { skill: "Solidity", level: "Advanced", index: 1 },
@@ -20,30 +20,14 @@ const Languages = () => {
             <div className="skills__box">
                 <div className="skills__group">
 
-                    {languages1.map(({ skill, level, index }) => {
-                        return (
-                            <div className="skills__data" key={index}>
-                                <i className="bx bx-badge-check"></i>
-                                <div className="">
-                                    <h3 className="skills__name">{skill}</h3>
-                                    <span className="skills__level">{level}</span>
-                                </div>
-                            </div>
-                        )
+                    {languages1.map((info) => {
+                        return <Card {...info} />
                     })}
                 </div>
                 <div className="skills__group">
 
-                    {languages2.map(({ skill, level, index }) => {
-                        return (
-                            <div className="skills__data" key={index}>
-                                <i className="bx bx-badge-check"></i>
-                                <div className="">
-                                    <h3 className="skills__name">{skill}</h3>
-                                    <span className="skills__level">{level}</span>
-                                </div>
-                            </div>
-                        )
+                    {languages2.map((info) => {
+                        return <Card {...info} />
                     })}
                 </div>
             </div>

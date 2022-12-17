@@ -1,4 +1,4 @@
-import React from 'react'
+import Card from './Card';
 
 const toolsList1 = [
     {skill: "Docker", level: "Intermediate", index:1},
@@ -19,38 +19,18 @@ const Tools = () => {
     return (
         <div className="skills__content">
             <h3 className="skills__title">Tools</h3>
-
             <div className="skills__box">
-
                 <div className="skills__group">
-                    {toolsList1.map(({skill, level, index}) => {
-                        return (
-                            <div className="skills__data" key={index}>
-                                <i className="bx bx-badge-check"></i>
-                                <div className="">
-                                    <h3 className="skills__name">{skill}</h3>
-                                    <span className="skills__level">{level}</span>
-                                </div>
-                            </div>
-                        )
+                    {toolsList1.map((info) => {
+                        return <Card {...info} />
                     })}
                 </div>
 
                 <div className="skills__group">
-                    {toolsList2.map(({skill, level, index}) => {
-                        return (
-                            <div className="skills__data" key={index}>
-                                <i className="bx bx-badge-check"></i>
-                                <div className="">
-                                    <h3 className="skills__name">{skill}</h3>
-                                    <span className="skills__level">{level}</span>
-                                </div>
-                            </div>
-                        )
+                    {toolsList2.map((info) => {
+                        return <Card {...info} />
                     })}
                 </div>
-
-
             </div>
         </div>
     )

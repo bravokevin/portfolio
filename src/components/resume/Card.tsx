@@ -1,4 +1,4 @@
-const Card = (props) => {
+const Card = (props: any) => {
   const { icon, year, title, desc } = props
   return (
     <div className="timeline__item">

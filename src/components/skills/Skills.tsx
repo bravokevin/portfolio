@@ -1,4 +1,3 @@
-import React from 'react'
 import "./skills.css";
 import Languages from './Languages';
 import Tools from './Tools';
