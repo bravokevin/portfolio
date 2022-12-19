@@ -118,6 +118,13 @@
 }
 
 
+@media screen and (max-width: 1200px) {
+.home__social {
+    margin-left: 2rem;
+}
+}
+
+
 /* For large devices */
 @media screen and (max-width: 992px) {
     .home__content {
@@ -185,6 +192,7 @@
         margin: auto;
         margin-top: 2rem;
     }
+
     .home__button {
         margin-left: 5rem;
     }
@@ -210,6 +218,7 @@
         width: 22px;
         height: 22px;
     }
+
     .home__button {
         margin-left: 4rem;
     }

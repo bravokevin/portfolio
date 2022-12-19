@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-interface Article  {
+interface Article {
   title: string;
   slug: string
   coverImage: string
@@ -49,17 +49,12 @@ const Blogs = () => {
       loop={true}
       grabCursor={true}
       pagination={{ clickable: true }}
-      slidesPerView={2}
+      slidesPerView={1}
       breakpoints={{
-        576: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-
         768: {
           slidesPerView: 2,
-          spaceBetween: 48
-        }
+          spaceBetween: 24
+        },
       }}
     >
       {articles.map((item: Article) => {
