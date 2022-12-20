@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -25,23 +26,34 @@ query GetUserArticles($page: Int!) {
 `;
 
 const variables = { page: 0 }
-const data = await fetch("https://api.hashnode.com/", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    query,
-    variables,
-  }),
-});
 
-
-const results = await data.json();
-const articles = results.data.user.publication.posts;
-
+const fetchArticles = async () => {
+  const data = await fetch("https://api.hashnode.com/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables,
+    }),
+  });
+  return data.json();
+}
 
 const Blogs = () => {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetchArticles()
+      .then(response => {
+        setArticles(response.data.user.publication.posts);
+
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
   return (
     <Swiper className="blog__container"
       modules={[Pagination]}

@@ -141,6 +141,9 @@
     .services__container {
         grid-template-columns: repeat(3, 218px);
     }
+    .services__content {
+        padding: 2.5rem 0.5rem 1.25rem 1.5rem;
+    }
 }
 
 /* For medium devices */

@@ -10,13 +10,18 @@
   },
   "dependencies": {
     "@emailjs/browser": "3.10.0",
+    "@notionhq/client": "2.2.2",
+    "axios": "1.2.1",
+    "clickup.js": "3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "request": "2.88.2",
     "swiper": "8.4.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@types/request": "2.48.8",
     "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"

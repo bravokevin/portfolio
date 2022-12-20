@@ -42,7 +42,7 @@ const About = () => {
                             fill="var(--container-color)"
                         ></path>
                     </svg></a>
-                    <a href="https://docs.google.com/document/d/e/2PACX-1vS6IzVvCi3B8iAL2y6jaxnhjsXVZlgts6a97EmExzgh_24MZsY7Zzlx49AAkkKW_SLsp4s8xEw9eIOi/pub" target="blank" className="button button--flex about__button" style={{backgroundColor: "var(--text-color)", padding: "1.3rem 1rem"}}>Know more about me{" "}<i className='uil uil-user button__icon'></i></a>
+                    <a href="https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c" target="blank" className="button button--flex about__button" style={{backgroundColor: "var(--text-color)", padding: "1.3rem 1rem"}}>Know more about me{" "}<i className='uil uil-user button__icon'></i></a>
                 </div>
             </div>
         </section >
