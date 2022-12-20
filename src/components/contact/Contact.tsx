@@ -44,6 +44,7 @@ const Contact = () => {
         e.preventDefault();
         if (validateInputs()) {
             setIsSendingMessage(true)
+            //@ts-ignore
             emailjs.sendForm('service_v95a0yb', 'template_03qju3l', form.current, 'YJTcUryrrxQ69EkYz')
                 .then(() => {
                     e.target.reset()
