@@ -20,7 +20,7 @@ const NAV_ITEMS = [
     },
     {
         name: 'AMA',
-        link: 'https://docs.google.com/document/d/e/2PACX-1vS6IzVvCi3B8iAL2y6jaxnhjsXVZlgts6a97EmExzgh_24MZsY7Zzlx49AAkkKW_SLsp4s8xEw9eIOi/pub',
+        link: 'https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c',
         icon: 'question',
         id: 4
     },

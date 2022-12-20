@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getPortfolioContent, PortfolioObject } from './portfolioData'
 import "./portfolio.css"
-
 const Portfolio = () => {
   const [portfolioContent, setPortfolioContent] = useState<PortfolioObject[]>([]);
   const [toggleState, setToggleState] = useState('0');
@@ -23,14 +22,15 @@ const Portfolio = () => {
       <h2 className="section__title">Portfolio</h2>
       <span className="section__subtitle">What I have done</span>
       <div className="services__container container grid">
+
         {portfolioContent.map((item) => {
-          const { title, id, icon, modalTitle, description, link } = item;
+          const { id, title, description, modalTitle, link, icon } = item;
           return (
             <div className="services__content" key={id}>
               <div>
                 <i className={`uil uil${icon} services__icon`}></i>
                 <h3 className="services__title">{title}</h3>
-                <span className="services__subtitle" >{modalTitle}</span>
+                <span className="services__subtitle">{modalTitle}</span>
               </div>
               <span className="services__button" onClick={() => toggleTab(id)}>View more<i className="uil uil-arrow-right services__button-icon"></i></span>
               <div className={toggleState === id ? "services__modal active-modal" : "services__modal"}>

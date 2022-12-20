@@ -17,7 +17,7 @@ const About = () => {
                     <p className="about__description">
                         I'm Kevin, smart contract developer from Caracas - Venezuela. Higly interest in ZK-proof, tokenomics and security, with a great understanding of solidity and EVM's related chains.
                     </p>
-                    <a href="" target="blank" className="button button--flex about__button">See my CV {" "}<svg
+                    <a href="https://drive.google.com/file/d/1XUAa1pM_F91Wp_SAPGe9lwWTTj_bVELI/view?usp=drivesdk" target="blank" className="button button--flex about__button">See my CV {" "}<svg
                         className="button__icon"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

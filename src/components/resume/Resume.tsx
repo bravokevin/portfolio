@@ -1,5 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { getListData } from '../portfolio/portfolioData';
 import "./resume.css"
+
+
 const Resume = () => {
 
     const [toggleState, setToggleState] = useState(0);
@@ -7,7 +10,18 @@ const Resume = () => {
     const toggleTab = (index: 0 | 1) => {
         setToggleState(index);
     }
+    const [resumeContent, setresumeContent] = useState<any[]>([]);
 
+    useEffect(() => {
+        getListData("900800048703")
+            .then(response => {
+                console.log(response)
+                setresumeContent(response);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    }, []);
     return (
         <section className="resume section" id="resume">
             <h2 className="section__title">Experience</h2>
@@ -37,53 +51,99 @@ const Resume = () => {
                     </div>
                 </div>
 
+                {resumeContent[0] === undefined ? <></> :
+                    <div className="resume__sections">
+                        <div className={toggleState === 1 ? "resume__content resume__content-active" : "resume__content "}>
 
-                <div className="resume__sections">
-                    <div className={toggleState === 1 ? "resume__content resume__content-active" : "resume__content "}>
+                            <div className="resume__data">
+                                <div>
+                                    <h3 className="resume__title">{resumeContent[0].name}</h3>
+                                    <span className="resume__subtitle">{resumeContent[0].description}</span>
+                                    <div className="resume__calendar">
+                                        <i className="uil uil-calendar-alt"></i>{`${new Date(Number(resumeContent[0].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[0].due_date)).toLocaleDateString()}`}
+                                    </div>
+                                </div>
 
-                        <div className="resume__data">
-                            <div>
-                                <h3 className="resume__title">Starknet Basecamp cohort 1</h3>
-                                <span className="resume__subtitle">by Starknet</span>
-                                <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i> 10/2020 - 11/2022
+                                <div>
+                                    <span className="resume__rounder"></span>
+                                    <span className="resume__line"></span>
                                 </div>
                             </div>
 
-                            <div>
-                                <span className="resume__rounder"></span>
-                                <span className="resume__line"></span>
+
+                            <div className="resume__data">
+                                <div></div>
+                                <div>
+                                    <span className="resume__rounder"></span>
+                                    <span className="resume__line"></span>
+                                </div>
+                                <div>
+
+                                    <h3 className="resume__title">{resumeContent[1].name}</h3>
+                                    <span className="resume__subtitle">{resumeContent[1].description}</span>
+                                    <div className="resume__calendar">
+                                        <i className="uil uil-calendar-alt"></i> {`${new Date(Number(resumeContent[1].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[1].due_date)).toLocaleDateString()}`}
+                                    </div>
+
+                                </div>
                             </div>
+
+                            <div className="resume__data">
+                                <div>
+                                    <h3 className="resume__title">{resumeContent[2].name}</h3>
+                                    <span className="resume__subtitle">{resumeContent[2].description}</span>
+                                    <div className="resume__calendar">
+                                        <i className="uil uil-calendar-alt"></i>{`${new Date(Number(resumeContent[2].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[2].due_date)).toLocaleDateString()}`}
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span className="resume__rounder"></span>
+                                    <span className="resume__line"></span>
+                                </div>
+                            </div>
+
                         </div>
 
+                        <div className={toggleState === 0 ? "resume__content resume__content-active" : "resume__content "}>
 
-                        <div className="resume__data">
+                            <div className="resume__data">
+                                <div>
+                                    <h3 className="resume__title">{resumeContent[3].name}</h3>
+                                    <span className="resume__subtitle">{resumeContent[3].description}</span>
+                                    <div className="resume__calendar">
+                                        <i className="uil uil-calendar-alt"></i>{" "}{`${new Date(Number(resumeContent[3].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[3].due_date)).toLocaleDateString()}`}
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <span className="resume__rounder"></span>
+                                    <span className="resume__line"></span>
+                                </div>
+                            </div>
+
+
+                            <div className="resume__data">
                             <div></div>
                             <div>
                                 <span className="resume__rounder"></span>
                                 <span className="resume__line"></span>
                             </div>
                             <div>
-
-                                <h3 className="resume__title">ZK-Proof Bootcamp by Encode Club</h3>
-                                <span className="resume__subtitle"></span>
+                                <h3 className="resume__title">{resumeContent[4].name}</h3>
+                                <span className="resume__subtitle">{resumeContent[4].description}</span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i> 02/2022 -04/2022
+                                    <i className="uil uil-calendar-alt"></i>{" "}{`${new Date(Number(resumeContent[4].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[4].due_date)).toLocaleDateString()}`}
                                 </div>
-
                             </div>
                         </div>
-
-                    </div>
-
-                    <div className={toggleState === 0 ? "resume__content resume__content-active" : "resume__content "}>
-
                         <div className="resume__data">
                             <div>
-                                <h3 className="resume__title">Software Developer</h3>
-                                <span className="resume__subtitle">Asociacion Venezolano Americana de la Amistad (AVAA) </span>
+                                <h3 className="resume__title">{resumeContent[5].name}</h3>
+                                <span className="resume__subtitle">{resumeContent[5].description}</span>
                                 <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i>{" "}10/2022 - 03/2022
+                                    <i className="uil uil-calendar-alt"></i>{" "}{`${new Date(Number(resumeContent[5].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[5].due_date)).toLocaleDateString()}`}
                                 </div>
                             </div>
 
@@ -94,24 +154,10 @@ const Resume = () => {
                             </div>
                         </div>
 
-                        {/* 
-                        <div className="resume__data">
-                            <div></div>
-                            <div>
-                                <span className="resume__rounder"></span>
-                                <span className="resume__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="resume__title"></h3>
-                                <span className="resume__subtitle"></span>
-                                <div className="resume__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                </div>
-                            </div>
-                        </div> */}
-
+                        </div>
                     </div>
-                </div>
+                }
+
             </div>
         </section>
     )
