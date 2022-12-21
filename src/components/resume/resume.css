@@ -112,6 +112,22 @@
     .resume__button {
         margin: 0 var(--mb-0-75);
     }
+
+    .resume__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+
+.resume__subtitle {
+    display: inline-block;
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.resume__calendar {
+    font-size: var(--smaller-font-size);
+}
 }
 
 /* For small devices */
