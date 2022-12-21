@@ -5,7 +5,7 @@ import "./resume.css"
 interface ResumeObj {
     name: string;
     description: string;
-    start_date: stirng;
+    start_date: string;
     due_date: string;
 }
 const Resume = () => {
