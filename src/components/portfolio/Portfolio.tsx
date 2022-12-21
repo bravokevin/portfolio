@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { getPortfolioContent, PortfolioObject } from './portfolioData'
 import "./portfolio.css"
+
+
 const Portfolio = () => {
   const [portfolioContent, setPortfolioContent] = useState<PortfolioObject[]>([]);
   const [toggleState, setToggleState] = useState('0');

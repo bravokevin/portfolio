@@ -10,12 +10,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "3.10.0",
-    "@notionhq/client": "2.2.2",
-    "axios": "1.2.1",
-    "clickup.js": "3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "request": "2.88.2",
     "swiper": "8.4.4"
   },
   "devDependencies": {

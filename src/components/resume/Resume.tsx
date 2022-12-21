@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react'
 import { getListData } from '../portfolio/portfolioData';
 import "./resume.css"
 
-
+interface ResumeObj {
+    name: string;
+    description: string;
+    start_date: stirng;
+    due_date: string;
+}
 const Resume = () => {
 
     const [toggleState, setToggleState] = useState(0);
@@ -10,12 +15,11 @@ const Resume = () => {
     const toggleTab = (index: 0 | 1) => {
         setToggleState(index);
     }
-    const [resumeContent, setresumeContent] = useState<any[]>([]);
+    const [resumeContent, setresumeContent] = useState<ResumeObj[]>([]);
 
     useEffect(() => {
         getListData("900800048703")
             .then(response => {
-                console.log(response)
                 setresumeContent(response);
             })
             .catch((err) => {
@@ -60,7 +64,7 @@ const Resume = () => {
                                     <h3 className="resume__title">{resumeContent[0].name}</h3>
                                     <span className="resume__subtitle">{resumeContent[0].description}</span>
                                     <div className="resume__calendar">
-                                        <i className="uil uil-calendar-alt"></i>{`${new Date(Number(resumeContent[0].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[0].due_date)).toLocaleDateString()}`}
+                                        <i className="uil uil-calendar-alt"></i>{" "}{`${new Date(Number(resumeContent[0].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[0].due_date)).toLocaleDateString()}`}
                                     </div>
                                 </div>
 
@@ -82,7 +86,7 @@ const Resume = () => {
                                     <h3 className="resume__title">{resumeContent[1].name}</h3>
                                     <span className="resume__subtitle">{resumeContent[1].description}</span>
                                     <div className="resume__calendar">
-                                        <i className="uil uil-calendar-alt"></i> {`${new Date(Number(resumeContent[1].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[1].due_date)).toLocaleDateString()}`}
+                                        <i className="uil uil-calendar-alt"></i> {" "}{`${new Date(Number(resumeContent[1].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[1].due_date)).toLocaleDateString()}`}
                                     </div>
 
                                 </div>
@@ -93,7 +97,7 @@ const Resume = () => {
                                     <h3 className="resume__title">{resumeContent[2].name}</h3>
                                     <span className="resume__subtitle">{resumeContent[2].description}</span>
                                     <div className="resume__calendar">
-                                        <i className="uil uil-calendar-alt"></i>{`${new Date(Number(resumeContent[2].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[2].due_date)).toLocaleDateString()}`}
+                                        <i className="uil uil-calendar-alt"></i>{" "}{`${new Date(Number(resumeContent[2].start_date)).toLocaleDateString()} - ${new Date(Number(resumeContent[2].due_date)).toLocaleDateString()}`}
                                     </div>
                                 </div>
 

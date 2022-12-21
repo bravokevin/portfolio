@@ -9,19 +9,12 @@ export interface PortfolioObject {
 
 
 export const getTaskInfo = async (taskId: string): Promise<PortfolioObject> => {
-    const query = new URLSearchParams({
-        include_subtasks: 'true'
-    }).toString();
 
     const resp = await fetch(
-        `https://api.clickup.com/api/v2/task/${taskId}?${query}`,
+        `https://verdant-cuchufli-2639de.netlify.app/.netlify/functions/server/tasks-api?taskId=${taskId}`,
         {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'pk_18924001_9XP63KU5MKGK40VZ09YHDJABAZAW1THD'
+            method: 'GET'
             }
-        }
     );
     const data = await resp.json();
     const obj = {
@@ -32,6 +25,7 @@ export const getTaskInfo = async (taskId: string): Promise<PortfolioObject> => {
         link: data.subtasks[1].name,
         icon: data.subtasks[2].name,
     }
+
     return obj
 }
 
@@ -39,25 +33,20 @@ export const getTaskInfo = async (taskId: string): Promise<PortfolioObject> => {
 export const getListData = async (listId = '900800044691') => {
     const query = new URLSearchParams({
         reverse: 'true',
-
       }).toString();
     const listItems = await fetch(
-        `https://api.clickup.com/api/v2/list/${listId}/task?${query}`,
+        `https://verdant-cuchufli-2639de.netlify.app/.netlify/functions/server/list-api?listId=${listId}`,
         {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'pk_18924001_9XP63KU5MKGK40VZ09YHDJABAZAW1THD'
+            method: 'GET'
             }
-        }
     );
     const listData = await listItems.json();
     return listData.tasks
-}
+        }
 
 export const getPortfolioContent = async () => {
     const listData = await getListData()
-    const data = [];
+     const data = [];
     for( let i in listData){
         const d = await getTaskInfo(listData[i].id)
         data.push(d)
