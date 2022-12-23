@@ -128,6 +128,15 @@
     color: var(--text-color);
 }
 
+.button__demo-link {
+    font-size: var(--smaller-font-size);
+    margin-left: 9rem;
+    background-color: var(--title-color);
+    color: var(--container-color);
+    padding: 0.3rem;
+    border-radius: 0.9rem;
+    /* font-weight: var(--font-medium); */
+}
 
 .active-modal {
     opacity: 1;
@@ -141,6 +150,7 @@
     .services__container {
         grid-template-columns: repeat(3, 218px);
     }
+
     .services__content {
         padding: 2.5rem 0.5rem 1.25rem 1.5rem;
     }
@@ -165,6 +175,7 @@
     .services__container {
         grid-template-columns: 1fr;
     }
+
     .services__modal-content {
         padding: 4.5rem 1.5rem 2.5rem;
     }
@@ -172,6 +183,25 @@
     .services__modal-description {
         padding: 0;
     }
+}
+
+@media screen and (max-width: 576px) {
+    .services__modal-link {
+        display: block;
+            text-align: center;
+        margin: auto;
+
+    }
+    .button__demo-link {
+        display: block;
+        width: 4rem;
+        padding-left: 0.6rem;
+        margin: auto;
+        margin-top: 1rem;
+
+    }
+
+
 }
 
 /* For small devices */

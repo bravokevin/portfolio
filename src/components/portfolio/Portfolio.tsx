@@ -26,7 +26,7 @@ const Portfolio = () => {
       <div className="services__container container grid">
 
         {portfolioContent.map((item) => {
-          const { id, title, description, modalTitle, link, icon } = item;
+          const { id, title, description, modalTitle, link, icon, demoLink } = item;
           return (
             <div className="services__content" key={id}>
               <div>
@@ -41,6 +41,7 @@ const Portfolio = () => {
                   <h3 className="services__modal-title">{modalTitle}</h3>
                   <p className="services__modal-description">{description}</p>
                   <a href={link} target="blank" className="services__modal-link">Read detailed explanation <i className="uil uil-arrow-right services__button-icon2"></i></a>
+                  <a href={demoLink} target="blank" className="button__demo-link">{'  '}Demo<i className="uil uil-arrow-right services__button-icon2"></i></a>
                 </div>
               </div>
             </div>

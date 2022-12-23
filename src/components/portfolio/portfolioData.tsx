@@ -5,6 +5,7 @@ export interface PortfolioObject {
     modalTitle: string;
     link: string;
     icon: string;
+    demoLink: string;
 }
 
 
@@ -24,6 +25,7 @@ export const getTaskInfo = async (taskId: string): Promise<PortfolioObject> => {
         modalTitle: data.subtasks[0].name,
         link: data.subtasks[1].name,
         icon: data.subtasks[2].name,
+        demoLink: data.subtasks[3].name,
     }
 
     return obj
