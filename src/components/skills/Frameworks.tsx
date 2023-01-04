@@ -8,9 +8,9 @@ const Frameworks1 = [
 ];
 
 const Frameworks2 = [
-    { skill: "React", level: "Intermediate", index: 4 },
-    { skill: "Truffle", level: "Indtermediate", index: 5 },
-    { skill: "Nile", level: "Indtermediate", index: 6 },
+    { skill: "NextJs", level: "Intermediate", index: 4 },
+    { skill: "Truffle", level: "Intermediate", index: 5 },
+    { skill: "Nile", level: "Intermediate", index: 6 },
 ];
 
 
