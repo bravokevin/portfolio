@@ -13,6 +13,7 @@ const toolsList2 = [
     {skill: "Tenderly", level: "Advanced", index:7},
     {skill: "Tally", level: "Advanced", index:8},
     {skill: "Open Zeppelin", level: "Advanced", index:9},
+    {skill: "GitHub actions", level: "Advanced", index:10},
 ]
 
 const Tools = () => {
