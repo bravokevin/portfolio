@@ -17,7 +17,7 @@ const About = () => {
                     <p className="about__description">
                         I'm Kevin, smart contract developer from Caracas - Venezuela. Higly interest in ZK-proof, tokenomics and security, with a great understanding of solidity and EVM's related chains.
                     </p>
-                    <a href="https://drive.google.com/file/d/1XUAa1pM_F91Wp_SAPGe9lwWTTj_bVELI/view?usp=drivesdk" target="blank" className="button button--flex about__button">See my CV {" "}<svg
+                    <a href="https://drive.google.com/file/d/1XUAa1pM_F91Wp_SAPGe9lwWTTj_bVELI/view?usp=drivesdk" target="blank" className="button button--flex about__button" style={{backgroundColor: "var(--text-color)"}}>See my CV {" "}<svg
                         className="button__icon"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -42,7 +42,7 @@ const About = () => {
                             fill="var(--container-color)"
                         ></path>
                     </svg></a>
-                    <a href="https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c" target="blank" className="button button--flex about__button" style={{backgroundColor: "var(--text-color)", padding: "1.3rem 1rem"}}>Know more about me{" "}<i className='uil uil-user button__icon'></i></a>
+                    <a href="https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c" target="blank" className="button button--flex about__button" style={{padding: "1.3rem 1rem"}}>Know more about me{" "}<i className='uil uil-user button__icon'></i></a>
                 </div>
             </div>
         </section >
