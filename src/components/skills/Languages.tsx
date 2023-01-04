@@ -3,13 +3,12 @@ import Card from "./Card";
 const languages1 = [
     { skill: "Solidity", level: "Advanced", index: 1 },
     { skill: "Typescript", level: "Advanced", index: 3},
-    { skill: "R", level: "Basic", index: 4 },
 ];
 
 const languages2 = [
     { skill: "SQL", level: "Intermediate", index: 5 },
-    { skill: "Python", level: "Indtermediate", index: 6 },
-    { skill: "Cairo", level: "Indtermediate", index: 7 },
+    { skill: "Python", level: "Intermediate", index: 6 },
+    { skill: "Cairo", level: "Intermediate", index: 7 },
 ];
 
 
