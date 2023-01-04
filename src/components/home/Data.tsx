@@ -8,7 +8,7 @@ const Data = () => {
         Smart contract developer
       </h3>
       <p className="home__description">
-        Focus on build a better the future with tech. &#128154;
+        Focus on build a better future with tech. &#128154;
       </p>
       <a href="#contact" className="button button--flex home__button">Contact me
         <svg
