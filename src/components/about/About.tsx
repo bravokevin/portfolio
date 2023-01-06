@@ -4,7 +4,6 @@ import Info from './Info';
 
 
 const About = () => {
-    const skills = ["Solidity", "Cairo", "Python", "Typescript", "Docker",];
     return (
         <section className="about__section" id="about">
             <h2 className="section__title">About me</h2>

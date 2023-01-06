@@ -32,7 +32,7 @@ export const getTaskInfo = async (taskId: string): Promise<PortfolioObject> => {
 }
 
 
-export const getListData = async (listId = '900800044691') => {
+export const getListData = async (listId: string) => {
     const query = new URLSearchParams({
         reverse: 'true',
       }).toString();
@@ -46,8 +46,8 @@ export const getListData = async (listId = '900800044691') => {
     return listData.tasks
         }
 
-export const getPortfolioContent = async () => {
-    const listData = await getListData()
+export const getPortfolioContent = async (listId = '900800044691') => {
+    const listData = await getListData(listId)
      const data = [];
     for( let i in listData){
         const d = await getTaskInfo(listData[i].id)

@@ -9,7 +9,7 @@ const Portfolio = () => {
   const toggleTab = (index: string) => {
     setToggleState(index);
   }
-
+  //gets portfolio content from clickup api. 
   useEffect(() => {
     getPortfolioContent()
       .then(response => {
@@ -19,6 +19,7 @@ const Portfolio = () => {
         console.log(err.message);
       });
   }, []);
+
   return (
     <section className="services section" id="portfolio">
       <h2 className="section__title">Portfolio</h2>

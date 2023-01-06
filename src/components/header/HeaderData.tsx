@@ -26,7 +26,7 @@ const NAV_ITEMS = [
     },
     {
         name: 'Blog',
-        link: 'https://kevdevto.hashnode.dev/',
+        link: 'https://blog.kevinbravo.me',
         icon: 'file-alt',
         id: 5
     },

@@ -13,7 +13,7 @@ interface Article {
 
 const query = `
 query GetUserArticles($page: Int!) {
-    user(username: "KevBTO") {
+    user(username: "BravoK") {
         publication {
             posts(page: $page) {
                 title
@@ -74,7 +74,7 @@ const Blogs = () => {
           <SwiperSlide className="blog__card">
             <img src={item.coverImage} alt="" className="blog__img" />
             <h3 className="blog__title">{item.title}</h3>
-            <a href={`https://kevdevto.hashnode.dev/${item.slug}`} className="blog__button" target="blank">
+            <a href={`https://blog.kevinbravo.me/${item.slug}`} className="blog__button" target="blank">
               Read <i className="bx bx-right-arrow-alt blog__button-icon"></i>
             </a>
           </SwiperSlide>

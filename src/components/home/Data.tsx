@@ -5,7 +5,7 @@ const Data = () => {
         Kevin Bravo
       </h1>
       <h3 className="home__subtitle">
-        Smart contract developer
+        Smart Contract Developer
       </h3>
       <p className="home__description">
         Focus on build a better future with tech. &#128154;

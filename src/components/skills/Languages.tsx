@@ -3,6 +3,8 @@ import Card from "./Card";
 const languages1 = [
     { skill: "Solidity", level: "Advanced", index: 1 },
     { skill: "Typescript", level: "Advanced", index: 3},
+    { skill: "Rust", level: "Basic", index: 4},
+
 ];
 
 const languages2 = [
