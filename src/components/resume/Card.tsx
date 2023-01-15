@@ -1,12 +1,21 @@
 const Card = (props: any) => {
-  const { icon, year, title, desc } = props
+  const {start_date, due_date, description, name } = props
   return (
-    <div className="timeline__item">
-      <i className={icon}></i>
-      <span className="timeline__date">{year}</span>
-      <h3 className="timeline__title">{title} </h3>
-      <p className="timeline__text">{desc}</p>
+
+    <div className="resume__data">
+    <div>
+        <h3 className="resume__title">{name}</h3>
+        <span className="resume__subtitle">{description}</span>
+        <div className="resume__calendar">
+            <i className="uil uil-calendar-alt"></i>{" "}{`${new Date(Number(start_date)).toLocaleDateString()} - ${new Date(Number(due_date)).toLocaleDateString()}`}
+        </div>
     </div>
+
+    <div>
+        <span className="resume__rounder"></span>
+        <span className="resume__line"></span>
+    </div>
+</div>
   )
 }
 export default Card;

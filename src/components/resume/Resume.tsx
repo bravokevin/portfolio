@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { getListData } from '../portfolio/portfolioData';
+import Card from './Card';
 import "./resume.css"
 
 interface ResumeObj {
     name: string;
-    description: string;
+    description: string
     start_date: string;
     due_date: string;
 }
@@ -58,7 +59,6 @@ const Resume = () => {
                 {resumeContent[0] === undefined ? <></> :
                     <div className="resume__sections">
                         <div className={toggleState === 1 ? "resume__content resume__content-active" : "resume__content "}>
-
                             <div className="resume__data">
                                 <div>
                                     <h3 className="resume__title">{resumeContent[0].name}</h3>
@@ -128,7 +128,7 @@ const Resume = () => {
                             </div>
 
 
-                            <div className="resume__data">
+                            {/* <div className="resume__data">
                             <div></div>
                             <div>
                                 <span className="resume__rounder"></span>
@@ -156,7 +156,7 @@ const Resume = () => {
                                 <span className="resume__rounder"></span>
                                 <span className="resume__line"></span>
                             </div>
-                        </div>
+                        </div> */}
 
                         </div>
                     </div>
